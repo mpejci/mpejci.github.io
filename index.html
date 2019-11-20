@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>MPZ-Rijeka-Sempre-Allegro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
+
+
+html { scroll-behavior: smooth; } 
+
+.slika {
+  height: 100vh;
+}
+
+
+
+/*RESPONZIVNA GALERIJA*/
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+   
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+  .pozdrav {
+	max-width:250px !important;
+  
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.spacing{
+text-align:left !important;
+letter-spacing: 0.4px;
+line-height:24px;
+
+}
+
+.header-button {
+	color: white !important;
+	text-decoration: none;
+}
+
+.header-button:hover {
+	background-color: rgba(255, 255, 255, 0.3) !important
+}
+
+.pozdrav{
+	position:relative !important;
+	
+	max-width:700px;
+	
+	
+	height: 8.5%; 
+	
+	top:-80%;
+	opacity:0.6;
+
+	
+
+}
+
+
+.crna {
+	color:black !important
+}
+
+
+</style>
+<body>
+
+<!--NAVIGACIJA-->
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-card" style="background-color: rgba(103, 58, 183, 0.7)">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu" style="background-color:initial !important"><i class="fas fa-bars" style="color:white !important"></i></a>
+ 	
+	<a href="#" class="w3-bar-item w3-padding-large header-button">NASLOVNA</a>	
+	
+	<a href="en.html" class="w3-bar-item w3-padding-large w3-right header-button">HR | <b class="crna">EN</b></a>
+	
+	<a href="#kontakt" class="w3-bar-item w3-padding-large w3-hide-small w3-right header-button">KONTAKT</a>
+    <a href="#clanovi" class="w3-bar-item w3-padding-large w3-hide-small w3-right header-button">ČLANOVI</a>	
+	<a href="#maestra" class="w3-bar-item w3-padding-large w3-hide-small w3-right header-button">MAESTRA</a>
+	<a href="#nastupi" class="w3-bar-item w3-padding-large w3-hide-small w3-right header-button">NASTUPI</a>	
+	<a href="#o_nama" class="w3-bar-item w3-padding-large w3-hide-small w3-right header-button">O NAMA</a>
+    
+    
+    </div>    
+</div>
+
+<!--NAVIGACIJA ZA MANJE EKRANE-->
+
+<div id="navDemo" class="w3-bar-block w3-deep-purple w3-opacity w3-hide w3-hide-large w3-hide-medium  w3-top" style="margin-top:46px">
+
+  <a href="#o_nama" class="w3-bar-item  w3-padding-large header-button" onclick="myFunction()">O NAMA</a>
+  <a href="#nastupi" class="w3-bar-item  w3-padding-large header-button " onclick="myFunction()">NASTUPI</a>
+  <a href="#maestra" class="w3-bar-item  w3-padding-large header-button" onclick="myFunction()">MAESTRA</a>
+  <a href="#clanovi" class="w3-bar-item w3-padding-large header-button" onclick="myFunction()">ČLANOVI</a>
+  <a href="#kontakt" class="w3-bar-item w3-padding-large header-button" onclick="myFunction()">KONTAKT</a>
+ 
+</div>
+
+<!--SADRŽAJ STRANICE-->
+
+<div class="w3-content" style="max-width:2000px;">
+
+  <!--POČETNA: AUTOMATSKI PRIKAZ SLIKA--> 
+  
+  <div class="mySlides w3-display-container w3-center slika  w3-animate-fading">
+    <img src="naslovna.jpg" style="width:100%; height: 100%; object-fit: cover; filter:brightness(0.8)">
+	<img src="dobrodosli.png" class="pozdrav">
+    <div class="w3-display-bottommiddle w3-mobile w3-container w3-text-white w3-padding-32">
+      <h3><b>Musica Sacra- Pazin</b></h3>
+      <h4 class="w3-hide-small">Listopad 2019.</h4>   
+	  <h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">Listopad 2019.</h4>  
+    </div>
+  </div>
+  
+ 
+ 
+  <div class="mySlides w3-display-container  w3-center slika w3-animate-fading">
+    <img src="naslovna8.jpg" style="width:100%; height: 100%; object-fit: cover; filter:brightness(0.8)">
+	<img src="dobrodosli.png" class="pozdrav" >
+    <div class="w3-display-bottommiddle w3-container w3-mobile w3-text-white w3-padding-32">
+      <h3><b>Musica Sacra- Rovinj</b></h3>
+      <h4 class="w3-hide-small">Širok i raznolik zborski repertoar</h4>
+	  <h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">Širok i raznolik zborski repertoar</h4>  
+	  
+    </div>
+  </div>
+  
+   <div class="mySlides w3-display-container w3-center slika w3-animate-fading">
+    <img src="naslovna13.jpg" style="width:100%; height: 100%; object-fit: cover; filter:brightness(0.6)">
+	<img src="dobrodosli.png" class="pozdrav" >
+    <div class="w3-display-bottommiddle w3-container w3-mobile w3-text-white w3-padding-32">
+      <h3><b>Musica Sacra- Rovinj</b></h3>
+      <h4 class="w3-hide-small">Zajednički nastup sa prijateljima zborom Roženice iz Pazina</h4>
+		<h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">Zajednički nastup sa prijateljima zborom Roženice iz Pazina</h4>
+    </div>
+  </div>
+  
+  <div class="mySlides w3-display-container w3-center slika w3-animate-fading">
+    <img src="naslovna11.jpg" style="width:100%; height: 100%; object-fit: cover; filter:brightness(0.8)">
+	<img src="dobrodosli.png" class="pozdrav" >
+    <div class="w3-display-bottommiddle w3-container w3-mobile w3-text-white w3-padding-32">
+      <h3><b>Guvernerova palača u Rijeci</b></h3>
+      <h4 class="w3-hide-small">Mjesto slavlja obljetničkih koncerata</h4> 
+		<h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">Mjesto slavlja obljetničkih koncerata</h4>
+    </div>
+  </div>
+  
+  <div class="mySlides w3-display-container w3-center slika w3-animate-fading">
+    <img src="carmina1.jpg" style="width:100%; height: 100%; object-fit: cover;filter:brightness(0.5)">
+	<img src="dobrodosli.png" class="pozdrav" >
+    <div class="w3-display-bottommiddle w3-container w3-mobile w3-text-white w3-padding-32">
+      <h3><b>Šibenik- Tvrđava Sv.Mihovila</b></h3>
+      <h4 class="w3-hide-small">Zajednička izvedba Carmine Burane sa ŠPD "Kolo" i Simfonijski puhački orkestar Hrvatske vojske</h4>
+		<h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">Zajednička izvedba Carmine Burane sa ŠPD "Kolo" i Simfonijski puhački orkestar Hrvatske vojske</h4>
+    </div>
+  </div>
+  
+  
+  
+    
+
+  
+  <div class="mySlides w3-display-container w3-center slika w3-animate-fading">
+    <img src="carmina2.jpg" style="width:100%; height: 100%; object-fit: cover;filter:brightness(0.9)">
+	<img src="dobrodosli.png" class="pozdrav" >
+    <div class="w3-display-bottommiddle w3-container w3-mobile w3-text-white w3-padding-32">
+      <h3><b>Šibenik- tvrđava Sv.Mihovila</b></h3>
+      <h4 class="w3-hide-small">Maestra i dvanaest mušketira </h4> 
+		<h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">Maestra i dvanaest mušketira</h4>
+    </div>
+  </div>
+  
+    <div class="mySlides w3-display-container w3-center slika w3-animate-fading">
+    <img src="naslovna7.jpg" style="width:100%; height: 100%; object-fit: cover;filter:brightness(0.9)">
+	<img src="dobrodosli.png" class="pozdrav" >
+    <div class="w3-display-bottommiddle w3-container w3-mobile w3-text-white w3-padding-32">
+      <h3><b>Pijanist Mateo Žmak</b></h3>
+      <h4  class="w3-hide-small">Prijatelj i korepetitor zbora</h4>   
+		<h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">Prijatelj i korepetitor zbora</h4>
+    </div>
+  </div>
+  
+  <div class="mySlides w3-display-container w3-center slika w3-animate-fading">
+    <img src="naslovna9.jpg" style="width:100%; height: 100%; object-fit: cover;filter:brightness(0.6)">
+	<img src="dobrodosli.png" class="pozdrav" >
+    <div class="w3-display-bottommiddle w3-container w3-mobile w3-text-white w3-padding-32">
+      <h3><b>Putujemo i stvaramo nova prijateljstva</b></h3>
+      <h4 class="w3-hide-small">S radošću se sjetimo zajedničkih trenutaka!</h4>  
+		<h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">S radošću se sjetimo zajedničkih trenutaka!</h4>
+    </div>
+  </div>
+  
+   <div class="mySlides w3-display-container w3-center slika w3-animate-fading">
+    <img src="naslovna6.jpg" style="width:100%; height: 100%; object-fit: cover;filter:brightness(0.5)">
+	<img src="dobrodosli.png" class="pozdrav" >
+    <div class="w3-display-bottommiddle w3-container w3-mobile w3-text-white w3-padding-32">
+      <h3><b>Čekamo Vas!</b></h3>
+      <h4 class="w3-hide-small">Pridružite se našoj Sempre Allegro obitelji <i class="far fa-smile-wink w3-spin" style="font-size:20px;color:white"></i></h4>    
+		<h4 class="w3-hide-medium w3-hide-large" style="font-size:100% !important">Pridružite se našoj Sempre Allegro obitelji <i class="far fa-smile-wink w3-spin" style="font-size:20px;color:white"></i></h4>
+	</div>
+  </div>
+
+	<!--O NAMA-->
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="o_nama">
+		<h2 class="w3-wide" style="margin-bottom: -10px">O NAMA</h2>
+		<p class="w3-opacity"><i>Obožavamo pjevati, družiti se i putovati</i></p>
+		<p class="w3-justify spacing w3-left"><br>MJEŠOVITI PJEVAČKI ZBOR “RIJEKA – SEMPRE ALLEGRO“ osnovan je na sv. Ceciliju 22.studenog 2014. godine s namjerom okupljanja zaljubljenika u glazbu i zborsko pjevanje. Dirigentica i osnivačica zbora je Helga Dukarić Dangubić, profesor savjetnik i zborovođa, Maestra mentorica Hrvatske udruge zborovođa.
+								Zbor je u kratkom vremenu svog postojanja ostvario čak deset međunarodnih nastupa s visokim rezultatima. Svoje prvo međunarodno uspješno predstavljanje Zbor je imao 31. svibnja 2015. na festivalu FAKS u Rovinju.
+								Ostvario je kvalitetnu suradnju s HGD "Zvijezda Danica" iz Kraljevice, MPZ "Ina" iz Zagreba, GMH "Vardar" iz Skopja, Coro „Giovani Fabrianesi“ iz Fabriana (Italija), zborom Coral Cantemus iz Urugvaja te zborom „Felicita“ iz Njemačke. U rujnu 2019. godine sudjeluje na proslavi 120. obljetnice Šibenskog pjevačkog društva „Kolo“ izvodeći „Carminu Buranu“. Kroz svoj program njeguje i promiče kulturno stvaralaštvo ovog područja, domaće-riječke, istarsko-primorske i uopće hrvatske glazbene baštine, ali i djela svjetske zborske literature.
+		
+		<h5 class="w3-justify spacing w3-left">Natjecanja i nagrade:</h5>
+		</p>					
+		
+							
+		<ul class="w3-justify w3-left spacing" style="list-style-type:none !important">
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> XXII. Internetional Competition Chorus Inside Croatia  (Rovinj, 27.08.2015.) – SREBRO</li>
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> International Choral Competition of Folkloristic Music "Adria Cantat"  (Šibenik, 28.05.2016.) – SREBRO</li> 
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> XXIII. International Competition Chorus Inside Croatia (Rovinj, 28.08.2016.) – ZLATO</li>
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> International Choral Competition „Aurora Cantat“ (Karlovac, 20.05.2017.) – ZLATO</li> 
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> XXIV. International Competition Chorus Inside Croatia (Rovinj, 2.09.2017.) – ZLATO</li> 
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> Međunarodno natjecanje zborova „Istria cantat“ (Pula, 20.01.2018.) – SREBRO</li>
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> 2nd International Choir Competition „Istramusica“ (Poreč, 23.09.2018.) – SREBRO</li>
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> 2nd International Choral Comptetition „Croatia cantat“ (Rijeka, 24.11.2018.) – ZLATO (kategorija C)</li>
+					<li><i class='fas fa-award' style='font-size:20px;color:purple'></i> 2nd International Choral Comptetition „Croatia cantat“ (Rijeka, 24.11.2018.) – ZLATO (kategorija D)</li> 
+		</ul>
+		<p class="w3-justify spacing w3-left"> Zbor kontinuirano i kvalitetno radi, brzo se razvija te postiže zapažene rezultate. Namjera je, cilj i intencija svih članova nastaviti u istom pozitivnom smjeru uz daljnje razvijanje suradnje sa srodnim organizacijama i zborovima.
+		</p>
+		
+		<div class="w3-row w3-padding-10">
+			<h4 class="w3-opacity"><i>Uprava zbora:</i></h4>
+			<div class="w3-third w3-padding">
+		  
+				<div class="container">
+					<img src="helga.jpg" alt="Maestra" class="w3-round-xxlarge " style="width:100%">
+					<h4>Maestra i predsjednica zbora: Helga Dukarić Dangubić</h4>
+				</div>
+			</div>
+		 
+				<div class="w3-third w3-padding">
+					<div class="container">
+						<img src="tajnica.jpg" alt="Tajnica" class=" w3-round-xxlarge " style="width:100%">
+						<h4>Tajnica: Magda Tomljanović</h4>
+					</div>
+				</div>
+
+				<div class="w3-third w3-padding">	
+						<div class="container">
+							<img src="blagajnica.jpg" alt="Blagajnica" class="w3-round-xxlarge " style="width:100%">
+							<h4>Blagajnica: Vesna Mohorić</h4>	
+						</div>
+				</div>
+		  </div>
+	 </div>					
+		
+	
+
+  <!--NASTUPI-->
+  <div class="w3-deep-purple" id="nastupi">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">DATUMI NASTUPA</h2>
+      <p class="w3-opacity w3-center"><i>Poslušajte nas na sljedećim lokacijama:</i></p><br>
+
+      <ul class="w3-ul w3-mobile w3-border w3-white w3-text-grey">
+        <li class="w3-padding">Studeni <span class="w3-white w3-margin-left w3-text-deep-purple">21. u 20:00h Rijeka- Guvernerova palača </span></li>
+        <li class="w3-padding">Prosinac <span class="w3-white w3-margin-left w3-text-deep-purple">21. u 20:00h Rijeka- Guvernerova palača</span></li>
+        <li class="w3-padding">Siječanj 2019. </li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="guver1.jpg" alt="Guvernerova1" style="width:100%">
+          <div class="w3-container w3-white">
+            <p><b>Međunarodna suradnja</b></p>
+            <p class="w3-opacity">1.1.2015.</p>
+            <p>Koncert se održao u Guvernerovoj palači u Rijeci</p>
+            <button class="w3-button w3-deep-purple w3-margin-bottom" onclick="document.getElementById('galerija_skok1').style.display='block'">Galerija</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom" >
+          <img src="guver2.jpg" alt="Guvernerova2" style="width:100%">
+          <div class="w3-container w3-white">
+            <p><b>Obljetnički koncert 2018.</b></p>
+            <p class="w3-opacity">29.11.2018.</p>
+            <p>Koncert se održao u Guvernerovoj palači u Rijeci</p>
+            <button class="w3-button w3-deep-purple w3-margin-bottom" onclick="document.getElementById('galerija_skok2').style.display='block'">Galerija</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="carmina4.jpg" alt="Guvernerova3" style="width:100%">
+          <div class="w3-container w3-white">
+            <p><b>Šibenik-Carmina Burana 2019.</b></p>
+            <p class="w3-opacity">27.09.2019.</p>
+            <p>Koncert uoči Dana grada Šibenika<br></p>
+            <button class="w3-button w3-deep-purple w3-margin-bottom" onclick="document.getElementById('galerija_skok3').style.display='block'">Galerija</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--GALERIJA SKOK-->
+  
+   <div id="galerija_skok1" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4 w3-animate-opacity">
+		  <header class="w3-container w3-deep-purple w3-center w3-padding-32"> 
+			<span onclick="document.getElementById('galerija_skok1').style.display='none'" 
+		   class="w3-button w3-deep-purple w3-xlarge w3-display-topright">×</span>
+			<h2 class="w3-wide"><i class="fa fa-picture-o w3-margin-right"></i>Treći obljetnički koncert</h2>
+			<h4><label><a href="https://www.youtube.com/channel/UCTe26x9t4zFM0iGhFaFW6Hw"><i class="fab fa-youtube">  Snimka nastupa</a></label></h4></i> 
+		  </header>
+
+			<div class="w3-container">
+			  <h2>Naslov</h2>
+			  <p>Tekst</p>
+			</div>
+
+			<div class="w3-content w3-display-container" style="max-width:500px">
+				  <img class="mySlidesx" src="helga.jpg" style="width:100%">
+				  <img class="mySlidesx" src="guver1.jpg" style="width:100%">
+				  <img class="mySlidesx" src="guver2.jpg" style="width:100%">
+				  <img class="mySlidesx" src="naslovna2.jpg" style="width:100%">
+				  <img class="mySlidesx" src="naslovna.jpg" style="width:100%">
+			  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+				<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+				<span class="w3-badge demox w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+				<span class="w3-badge demox w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+				<span class="w3-badge demox w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+				<span class="w3-badge demox w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+				<span class="w3-badge demox w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+			  </div>
+			</div>
+		<div class="w3-container">
+		<button class="w3-button  w3-deep-purple center w3-section" onclick="document.getElementById('galerija_skok1').style.display='none'"  style="width:75%">Zatvori <i class="fa fa-remove"></i></button>  
+	    </div>
+    </div>
+  </div>
+  
+  
+   <div id="galerija_skok2" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4 w3-animate-opacity">
+		  <header class="w3-container w3-deep-purple w3-center w3-padding-32"> 
+			<span onclick="document.getElementById('galerija_skok2').style.display='none'" 
+		   class="w3-button w3-deep-purple w3-xlarge w3-display-topright">×</span>
+			<h2 class="w3-wide"><i class="fa fa-picture-o w3-margin-right"></i>Drugi obljetnički koncert</h2>
+			<h4><label><a href="https://www.youtube.com/channel/UCTe26x9t4zFM0iGhFaFW6Hw"><i class="fab fa-youtube">  Snimka nastupa</a></label></h4></i> 
+		  </header>
+		 
+			<div class="w3-container">
+			  <h2>Naslov</h2>
+			  <p>Tekst</p>
+			</div>
+			<div class="w3-content w3-display-container" style="max-width:500px">
+				  <img class="mySlidesy" src="helga.jpg" style="width:100%">
+				  <img class="mySlidesy" src="guver1.jpg" style="width:100%">
+				  <img class="mySlidesy" src="guver2.jpg" style="width:100%">
+			  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+				<div class="w3-left w3-hover-text-khaki" onclick="plusDivsy(-1)">&#10094;</div>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivsy(1)">&#10095;</div>
+				<span class="w3-badge demoy w3-border w3-transparent w3-hover-white" onclick="currentDivy(1)"></span>
+				<span class="w3-badge demoy w3-border w3-transparent w3-hover-white" onclick="currentDivy(2)"></span>
+				<span class="w3-badge demoy w3-border w3-transparent w3-hover-white" onclick="currentDivy(3)"></span>
+			  </div>
+			</div>
+				<div class="w3-container">
+				<button class="w3-button  w3-deep-purple center w3-section" onclick="document.getElementById('galerija_skok2').style.display='none'"  style="width:75%">  Zatvori <i class="fa fa-remove"></i></button>       
+				</div>		
+		</div>		
+    </div>
+  
+  
+	<div id="galerija_skok3" class="w3-modal">
+		<div class="w3-modal-content w3-animate-top w3-card-4 w3-animate-opacity">
+			  <header class="w3-container w3-deep-purple w3-center w3-padding-32"> 
+				<span onclick="document.getElementById('galerija_skok3').style.display='none'" 
+			   class="w3-button w3-deep-purple w3-xlarge w3-display-topright">×</span>
+				<h2 class="w3-wide"><i class="fa fa-picture-o w3-margin-right"></i>Šibenik-Carmina Burana 2019.</h2>
+				<h4><label><a href="https://www.youtube.com/channel/UCTe26x9t4zFM0iGhFaFW6Hw" ><i class="fab fa-youtube">  Snimka nastupa</a></label></h4></i> 
+			  </header>
+			 
+			<div class="w3-container">
+			  <h2  style="color:rgb(103, 58, 183) !important"><a href="https://www.facebook.com/sibensko.kolo/"><i class="fab fa-facebook-f purple w3-hover-opacity"></i>Šibensko pjevačko društvo "Kolo"</h2></a>
+				<p class="spacing" Na ljetnoj pozornici Tvrđave sv. Mihovila uoči Dana grada Šibenika, kantatu Carmina Burana izveo je Simfonijski puhački orkestar HV-a, ŠPD Kolo i njihovi gosti iz Rijeke Mješoviti pjevački zbor Sempre Allegro.<br>
+					Dirigent je bio Miroslav Vukovojac-Dugan, a solisti sopranistica Lidija Horvat-Dunjko, kontratenor Marko Antolković te bariton Florijan Tavić. Ovim koncertom šibenski Kolaši obilježavaju i 120 godina djelovanja.
+					<br>Unatoč prohladnoj večeri, gledalište na ljetnoj pozornici Tvrđave sv. Mihovila bilo je ispunjeno, a nastup Kolaša i njihovih gostiju iz Rijeke te Simfonijskog puhačkog orkestra HV-a publika je nagradila velikim aplauzom.
+					<br><br>Izvor: Slobodna Dalmacija
+				</p>
+			</div>
+			<div class="w3-content w3-display-container" style="max-width:650px">
+			 
+			  <img class="mySlidesz" src="carmina3.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina4.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina5.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina6.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina7.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina8.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina9.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina10.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina11.jpg" style="width:100%">
+			  <img class="mySlidesz" src="carmina13.jpg" style="width:100%">
+			  
+			  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+				<div class="w3-left w3-hover-text-khaki" onclick="plusDivsz(-1)">&#10094;</div>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivsz(1)">&#10095;</div>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(1)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(2)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(3)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(4)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(5)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(6)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(7)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(8)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(9)"></span>
+				<span class="w3-badge demoz w3-border w3-transparent w3-hover-white" onclick="currentDivz(10)"></span>												
+			  </div>
+			</div>
+			
+			<div class="w3-container">
+				<button class="w3-button  w3-deep-purple center w3-section" onclick="document.getElementById('galerija_skok3').style.display='none'"  style="width:75%">Zatvori <i class="fa fa-remove"></i></button>        
+			</div>	
+		</div>		
+	</div>
+
+  
+  <!---MAESTRA-->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="width:80%;max-width:800px" id="maestra">
+		<h2 class="w3-wide">MAESTRA</h2>
+		<p class="w3-opacity"><i>//Moto, poslovica- po želji</i></p>
+		<p class="w3-justify w3-left spacing">	Helga Dukarić Dangubić, profesor savjetnik i zborovođa. Diplomirala glazbenu kulturu na Pedagoškom fakultetu u Puli. Umjetnička je voditeljica i dirigentica mješovitom pjevačkom zboru  „Rijeka – Sempre Allegro“ i dječjem zboru “Kantridska jedra“. 
+										Hrvatska udruga zborovođa joj je 1. travnja 2016.g. dodjelila priznanje u obliku strukovnog naziva Maestra mentorica Hrvatske udruge zborovođa  za postignute trajne rezultate visoke umjetničke razine.
+										Iza sebe ima impresivan uspjeh te je sudjelovala na brojnim državnim i međunarodnim smotrama i natjecanjima na kojima osvaja srebrne i zlatne plakete. 
+										Među nagradama se ističu dvije srebrne i zlatna plaketa s državnog natjecanja Glazbene svečanosti hrvatske mladeži u Varaždinu  s dječjim zborom „Hreljinski svićurići“ 2008.,2009., i 2010.g. 
+										S dječjom klapom „Krijesnice“ na državnom natjecanju u Zadru osvaja dva zlata i broncu 2009., 2010., i 2011.g. Na državnom natjecanju „Europa u školi“ osvaja tri nagrade – dvije zlatne te jednu brončanu (2007., 2008., 2009.). 
+		</p>
+										
+		<p class="w3-justify w3-left spacing">Umjetnički je voditelj i dirigent zbora „Vokalni studio Rijeka“ od 2010. do 2014. godine. Nagrade i priznanja: 
+		</p>
+		
+		<ul class="w3-justify w3-left spacing" style="list-style-type:none !important">
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> Međunarodno natjecanje zborova "22. Concorso Internazionale Di Canto Corale" - SREBRO (Verona, 2011. godina)</li> 
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> Međunarodno natjecanje zborova u folklornom pjevanju "Adria Cantat" - SREBRO (Šibenik, 2014. godina) </li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> "XII. International Competition Chorus Inside Croatia" - ZLATO (Rovinj, 2014. godina) </li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> Svjetsko natjecanje zborova "Canta al Mar" - ZLATO (Callela, Španjolska, 2014. godina) </li>
+		</ul>							
+		<p class="w3-justify w3-left spacing">U periodu od 2012. do 2018. također vodi i HGD „Zvijezda Danica“. Osim brojnih nastupa i gostovanja u zemlji i inozemstvu, ističu se sljedeće nagrade:  </p>
+		<ul class="w3-justify w3-left spacing" style="list-style-type:none !important">							
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> Svjetsko natjecanje zborova "Canta al Mar" - SREBRO (Callela, Španjolska, 2014. godina)</li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> Međunarodno natjecanje zborova „Adria Cantat“ – SREBRO (Šibenik, 2016. godina) </li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> „XXIII. International Competition Chorus Inside Croatia“ – SREBRO (Rovinj, 2016. godina)</li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> International Choral Competition „Aurora Cantat“ – SREBRO (Karlovac, 2017. godina) </li>
+		</ul>						
+		<p class="w3-justify w3-left spacing">22. studenog 2014. godine osniva zbor MPZ „Rijeka – Sempre Allegro“ koji u kratkom vremenu ostvaruje zapažene rezultate. U četiri godine postojanja, osvaja četiri srebrne nagrade te pet zlatnih nagrada:  
+		</p>
+		<ul class="w3-justify w3-left spacing" style="list-style-type:none !important">
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> XXII. Internetional Competition Chorus Inside Croatia  (Rovinj, 27.08.2015.) – SREBRO</li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> International Choral Competition of Folkloristic Music "Adria Cantat"  (Šibenik, 28.05.2016.) – SREBRO </li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> XXIII. International Competition Chorus Inside Croatia (Rovinj, 28.08.2016.) – ZLATO</li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> International Choral Competition „Aurora Cantat“ (Karlovac, 20.05.2017.) – ZLATO </li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> XXIV. International Competition Chorus Inside Croatia (Rovinj, 2.09.2017.) – ZLATO </li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> Međunarodno natjecanje zborova „Istria cantat“ (Pula, 20.01.2018.) – SREBRO</li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> 2nd International Choir Competition „Istramusica“ (Poreč, 23.09.2018.) – SREBRO</li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> 2nd International Choral Comptetition „Croatia cantat“ (Rijeka, 24.11.2018.) – ZLATO (kategorija C)</li>
+								<li>	<i class='fas fa-award' style='font-size:20px;color:purple'></i> 2nd International Choral Comptetition „Croatia cantat“ (Rijeka, 24.11.2018.) – ZLATO (kategorija D) </li>
+		</ul>
+		
+			<p class="w3-justify w3-left spacing">Na natjecanju „Croatia cantat“ održanom u studenom 2018. osvaja i posebnu nagradu za dirigenta.
+			Izdala je dva nosača zvuka te je član mnogih prosudbenih komisija na međunarodnim natjecanjima.<br><br> 
+			</p>					  
+		
+			<img src="helga.jpg" alt="Maestra" class="image w3-round-xxlarge w3-margin-bottom" style="width:100%; max-width: 296px">
+			<div class="w3-round-xxlarge">Maestra Helga Dukarić Dangubić</div>
+	  		  		
+	</div>	
+
+  <!--ČLANOVI-->
+	<div class="w3-deep-purple" id="clanovi">
+		<div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+		  <h2 class="w3-wide w3-center">ČLANOVI</h2> 
+			<div class="w3-row">
+				  
+				  <h3 class="w3-opacity w3-half"><i>Allegrice:</i></h3>		
+				  <div class="w3-container w3-quarter w3-opacity">
+				  <p><i><h5>Soprani:</h5>
+							Nikolina Akmadža
+							<br>Arijana Babić
+							<br>Suzana Baljak
+							<br>Lara Čvorak
+							<br>Vlasta Kabalin
+							<br>Lina Mohorić
+							<br>Tarin Kaja Rupčić
+							<br>Marija Sučić
+							<br>Lea Šešelja
+							<br>Snježana Štiglić			  
+										
+					</i></p>
+				  </div>
+				  <div class="w3-container w3-quarter w3-opacity">
+					<p><i><h5>Alti:</h5>
+							Majda Anić
+							<br>Jadranka Jurić
+							<br>Vesna Mohorić
+							<br>Jelena Picco
+							<br>Dora Šimunović
+							<br>Karmen Šporčić
+							<br>Magda Tomljanović
+							<br>Štefica Topić											
+					
+					</i></p>
+			  </div>
+			  
+			  <h3 class="w3-opacity w3-half"><i>Allegrići:</i></h3>	
+			  <div class="w3-container w3-quarter w3-opacity">
+			  
+				  
+				<p><i><h5>Tenori:</h5>
+							David Babić
+						<br>Goran Gotlibović
+						<br>Vanja Makaj						
+						<br>Srećko Mihelić
+						<br>Luka Požgaj
+						<br>Marino Štiglić
+										
+				
+				</i></p>
+			  </div>
+			  <div class="w3-container w3-quarter w3-opacity">
+				<p><i><h5>Basi:</h5>
+						Damjan Banić
+						<br>Marko Maričević
+						<br>Damjan Mihelić
+						<br>Neven Panić
+						<br>Matija Pejčinović
+						<br>Anteo Stašić
+					
+				</i></p>
+			  </div>
+			</div>
+		
+		</div>
+	</div>
+  
+  
+  
+
+  <!--KONTAKT-->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px;text-align:justify" id="kontakt">
+    <h2 class="w3-wide w3-center">KONTAKT</h2>
+    <p class="w3-opacity w3-center"><i>Želite li pjevati s nama? Glazbeno obrazovanje nije uvijet. Pošaljite poruku, čekamo Vas!  <i class="far fa-smile-wink w3-spin" style="font-size:20px;color:purple"></i> </i></p>
+	
+    <div class="w3-row">
+      <div class="w3-col m6 w3-large w3-margin-bottom ">
+	  <br>
+        <i class="fas fa-map-marker-alt" style="width:30px;color:purple"></i>Adresa prostora:<br><br>Šetalište Andrije Kačića Miošića 8, 51000 Rijeka<br>
+															(Probe se održavaju ponedjeljkom i srijedom od 20-22h)<br><br>
+		<i class="fa fa-phone" style="font-size:20px;color:purple"></i>  Mobitel:<a href="tel:+385 91 5712 453">+385 91 5712 453</a> <br><br>
+        <i class="fa fa-envelope" style="width:30px;color:purple"></i>Email: <a href="mailto:h.dukaric.dangubic@gmail.com?Subject=Hello%20again" target="_top">h.dukaric.dangubic@gmail.com</a>
+		<i style="width:30px"> </i><a href="mailto:rijeka.sempre.allegro@gmail.com?Subject=Hello%20again" target="_top"><br>rijeka.sempre.allegro@gmail.com</a>
+      </div>
+      
+    </div>
+  </div>
+  
+<!--KRAJ SADRZAJA STRANICE-->
+</div>
+
+<!--KARTA-->
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px;text-align:justify" id="kontakt">
+	<iframe width="100%" height="655" id="gmap_canvas" src="https://maps.google.com/maps?q=%C5%A1etali%C5%A1te%20andrije%20ka%C4%8Di%C4%87a%20mio%C5%A1i%C4%87a%208&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+ </div>
+<!--FOOTER-->
+<br><br>
+<footer class=" w3-center w3-padding-64 w3-deep-purple w3-xxlarge " style="background-color: rgba(103, 58, 183, 0.7)!important;">
+<a href="https://www.facebook.com/MPZ-Rijeka-Sempre-Allegro-407295392761315/" style="text-decoration:none !important"><i class="fab fa-facebook-f  w3-hover-opacity"></i></a><a href="https://www.instagram.com/ri_sempre.allegro/?hl=hr"  style="text-decoration:none !important">     <i class="fab fa-instagram w3-hover-opacity"></i></a>     <a href="https://www.youtube.com/channel/UCTe26x9t4zFM0iGhFaFW6Hw" style="text-decoration:none !important">  <i class="fab fa-youtube w3-hover-opacity">   </i>     </a>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal1 = document.getElementById('galerija_skok1');
+var modal2 = document.getElementById('galerija_skok2');
+var modal3 = document.getElementById('galerija_skok3');
+
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+
+
+// Galerija x
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlidesx");
+  var dots = document.getElementsByClassName("demox");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+
+
+// Galerija y
+var slideIndexy = 1;
+showDivsy(slideIndexy);
+
+function plusDivsy(n) {
+  showDivsy(slideIndexy += n);
+}
+
+function currentDivy(n) {
+  showDivsy(slideIndexy = n);
+}
+
+function showDivsy(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlidesy");
+  var dots = document.getElementsByClassName("demoy");
+  if (n > x.length) {slideIndexy = 1}
+  if (n < 1) {slideIndexy = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndexy-1].style.display = "block";  
+  dots[slideIndexy-1].className += " w3-white";
+}
+
+
+// Galerija z
+var slideIndexz = 1;
+showDivsz(slideIndexz);
+
+function plusDivsz(n) {
+  showDivsz(slideIndexz += n);
+}
+
+function currentDivz(n) {
+  showDivsz(slideIndexz = n);
+}
+
+function showDivsz(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlidesz");
+  var dots = document.getElementsByClassName("demoz");
+  if (n > x.length) {slideIndexz = 1}
+  if (n < 1) {slideIndexz = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndexz-1].style.display = "block";  
+  dots[slideIndexz-1].className += " w3-white";
+}
+
+
+
+
+
+// AUTOMATSKA PROMJENA SLIKA 8 SEK.
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 8000);    
+}
+</script>
+
+</body>
+</html>
