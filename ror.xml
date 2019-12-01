@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://sempreallegro.hr/</title>
+  <link>http://sempreallegro.hr/</link>
+
+<item>
+     <link>https://sempreallegro.hr/</link>
+     <title>MPZ "Rijeka-Sempre Allegro"</title>
+     <description>MJEŠOVITI PJEVAČKI ZBOR “RIJEKA – SEMPRE ALLEGRO“ 
+				  osnovan je na sv. Ceciliju 22.studenog 2014. godine 
+				  s namjerom okupljanja zaljubljenika u glazbu i zborsko pjevanje. 
+				  Dirigentica i osnivačica zbora je Helga Dukarić Dangubić, 
+				  profesor savjetnik i zborovođa, Maestra mentorica Hrvatske udruge zborovođa.
+								Zbor je u kratkom vremenu svog postojanja 
+				  ostvario čak deset međunarodnih nastupa s visokim rezultatima.
+				  <p hidden</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://sempreallegro.hr/en.html</link>
+     <title>MPZ Rijeka-Sempre-Allegro</title>
+     <description>MPZ Rijeka-Sempre-Allegro</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://sempreallegro.hr/index.html</link>
+     <title>MPZ "Rijeka-Sempre Allegro"</title>
+     <description>MJEŠOVITI PJEVAČKI ZBOR “RIJEKA – SEMPRE ALLEGRO“ 
+				  osnovan je na sv. Ceciliju 22.studenog 2014. godine 
+				  s namjerom okupljanja zaljubljenika u glazbu i zborsko pjevanje. 
+				  Dirigentica i osnivačica zbora je Helga Dukarić Dangubić, 
+				  profesor savjetnik i zborovođa, Maestra mentorica Hrvatske udruge zborovođa.
+								Zbor je u kratkom vremenu svog postojanja 
+				  ostvario čak deset međunarodnih nastupa s visokim rezultatima.
+				  <p hidden</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
